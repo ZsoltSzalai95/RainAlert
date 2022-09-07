@@ -10,11 +10,13 @@ TWILIO_ACCOUNT_SID="YOURACCOUNT"
 TWILIO_ACCOUNT_SID="YOURACCOUNT"
 TWILIO_AUTH_TOKEN="YOURTOKEN"
 
+YOUR_PHONE_NUMBER= ""
 
 
+#Copenhagen parameters, Denmark
 parameters={
-    "lat": 62.264744,
-    "lon": 5.571001,
+    "lat": 55.676098,
+    "lon": 12.568337,
     "exclude": "current,minutely,daily",
     "appid": api_key,
 }
@@ -36,7 +38,7 @@ if will_rain:
     message = client.messages.create(
         body="It is going to rain today. Remember to bring an umbrella! ☔",
         from_="+19362593268",
-        to="+4550137989"
+        to = YOUR_PHONE_NUMBER
     )
 
     print(message.status)
